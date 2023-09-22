@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+body{
+
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+
+/* header */
+
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* max-width: 100%; */
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 3;
+}
+.nav-logo span{
+    font-weight: bold;
+    margin-right: 5px;
+}
+.nav-links a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    color: black;
+    letter-spacing: 4px;
+}
+
+.nav-links a:hover{
+    color: white;
+    border-radius: 8px;
+    background-color: orangered;
+    transition: 0.3s;
+}
+
+nav .menu-icon{
+    display: none;
+    width: 40px;
+   
+}
+.img-header{
+  
+    position: relative;
+}
+.img-header p{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 28px;
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+.nav-logo  a{
+    text-decoration: none;
+    color: black;
+    letter-spacing:4px;
+}
+.nav-logo span,.img-header span{
+    background-color: #000000ab;
+    color: orangered;
+    padding: 6px 12px;
+    font-weight: 600;
+    margin-right: 8px;
+    border-radius: 4px;
+    }
+    .img-header img{
+        height: 100vh;
+        width: 100%;
+    }
+
+
+/* projects section*/
+
+.projects{
+    margin-top: 5px;
+    padding: 10px 20px;
+}
+.projects h3,h3{
+    
+color: orangered;
+    
+margin: 20px 0;
+    
+letter-spacing: 14px;
+    
+font-size: 26px;
+    
+padding: 16px 0;
+    
+/* border-bottom: 1px solid #ccc; */
+    
+text-transform: uppercase;
+    
+text-align: center;
+    
+font-weight: 600;
+}
+
+
+.projects .row{
+display: grid;
+grid-template-columns: repeat(4,1fr);
+gap: 15px;
+margin-bottom: 15px;
+
+}
+
+
+/* media quary */
+
+@media (max-width:767px) {
+    nav{
+        position: relative;
+    }
+    .nav-links {display: none;
+    }
+
+    nav .menu-icon{
+        display: block;
+    }
+    .img-header p{
+        font-size: 22px;
+    }
+    .projects h3{
+        font-size: 15px;
+    }
+    .projects .row{
+        grid-template-columns: 1fr;
+    }
+   
+    .about .boxs{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .projects .row{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media (min-width:768px) {
+    .projects .row{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+@media (min-width:992px) {
+    .projects .row{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+   .row .text-img p{
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+
+   }
+   .projects .col-box{
+    position: relative;
+    transition: 0.5s;
+
+}
+.projects .col-box:hover{
+    opacity: .5;
+}
+
+.projects img{
+    width: 100%;
+   
+}
+/* .container{
+    margin: 0 auto;
+} */
+/* about section */
+.about{
+    margin-top: 5px;
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.053);
+}
+.boxs{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    filter: grayscale(.75);
+    transition: 0.5s;
+    /* padding: 5px 10px; */
+    background-color: white;
+    /* box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 28%); */
+}
+
+.box:hover{
+    box-shadow: 0px 2px 5px 5px rgb(0 0 0 / 14%);
+    transform: translatey(-15px);
+    filter: grayscale(0);
+    
+}
+.box img{
+    width: 100%;
+    padding: 0 !important;
+
+}
+.about .box .name{
+    font-family: "Segoe UI",Arial,sans-serif;
+    margin: 10px 0;
+    font-size: 24px;
+    padding-left: 10px;
+}
+.about .box .job{
+    margin: 15px 0;
+    color: #a59f9f;
+    padding-left: 10px;
+}
+ .info{
+    margin: 20px 0;
+    padding-left: 10px;
+}
+.about-heading{
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: -22px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+.about .box button{
+    width: 100%;
+    background-color: #ccc;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.about .box button:hover{
+    background-color: #afacac;
+}
+/* contact-section */
+.contact{
+    background-image: url(./images/pexels-photo-290595.webp);
+    background-size: cover;
+    padding: 10px 20px;
+    /* margin-top: 40px; */
+}
+.contact-p{
+    color: #fff;
+    letter-spacing: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+.contact form{
+    margin: 15px 0;
+}
+.contact form input{
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 17px;
+    background-color: rgb(255 255 255 / 42%);
+    border: 1px solid #ffff;
+    outline: none;
+    caret-color: orangered;
+}
+.contact form input::placeholder{
+font-size: 15px;
+color: black;
+
+}
+
+.contact form button{
+    text-transform: uppercase;
+    padding: 8px 16px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    margin: 15px 0;
+    font-size: 17px;
+    transition: 0.3s;
+}
+.contact form button:hover{
+    background-color: #afacac;
+    color: #000;
+}
+@media (max-width:787px){
+    .contact form button{
+        width: 100%;
+    }
+    
+}
+
+/* footer */
+.container-footer{
+    padding: 30px;
+    background-color: #d8ebed;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+}
+.container-footer span{
+    background-color: #000;
+    color: orangered;
+    padding: 5px;
+    border-radius: 4px;
+}
+.footer-p{
+    margin-top: 20px;
+}
+.container-footer .footer-icons{margin: 30px 0;}
+.footer-icon{width: 45px;height: 45px;margin-right: 10px;background-color: #ffffff9c;border-radius: 4px;}
+.footer-icon:hover{
+
+  background-color: orangered;
+
+}
